@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-grid slds-wrap slds-gutters">
+        <template if:true={showHelloChild}>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-m-bottom_medium">
+                <c-hello-world></c-hello-world>
+            </div>
+        </template>
+        <lightning-button 
+            class="slds-p-right_medium slds-p-left_medium"
+            label={buttonLabel} 
+            variant="brand"
+            onclick={hideHelloWorld}
+        >
+        </lightning-button>
+
+    </div>
+</template>

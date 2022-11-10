@@ -1,0 +1,47 @@
+<template>
+    <section role="dialog" tabindex="-1" aria-modal="true" class={sectionClass} onclick={handleModalClick}>
+        <div class="slds-modal__container ">
+            <div class="modalShadow">
+                <header class="slds-modal__header ModalHeaderTitle">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        onclick={close}>
+                        <lightning-icon icon-name="utility:close" size="medium">x</lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 class="slds-text-heading_medium slds-hyphenate">{modaltitle}</h2>
+                </header>
+                <div if:false={modalsubtitle} class={contentClass}>
+                    <slot></slot>
+                </div>
+                <div if:true={modalsubtitle}
+                    class={modalSubtitleContentClass}>
+                    <div class="slds-grid slds-wrap slds-gutters_medium slds-p-bottom_medium">
+                        <div
+                            class="slds-col slds-nowrap slds-size_1-of-1 ModalHeaderDescription slds-align_absolute-center slds-p-top_xx-small slds-p-bottom_xx-small">
+                            {modalsubtitle}
+                        </div>
+                    </div>
+                    <slot></slot>
+                </div>
+                <footer class="slds-modal__footer" style="border: none;">
+                    <div class="slds-grid">
+                        <div class="slds-size_1-of-1 slds-align_end">
+                            <template if:true={showModalFooter}>
+                                <slot name="footer"></slot>
+                            </template>
+                            <template if:false={showModalFooter}>
+                                <div class="slds-grid slds-grid_align-end" style="width: 100%;">
+                                    <div class="slds-col">
+                                        <lightning-button label="Done" variant="brand" onclick={close}>
+                                        </lightning-button>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
+    <div class={backdropClass}></div>
+</template>
