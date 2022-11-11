@@ -1,0 +1,19 @@
+p {
+    color: salmon;
+}
+:host{
+    --sds-c-button-destructive-color-background: #FBB917;
+    --sds-c-button-destructive-color-background-hover: #FBB917;
+    --sds-c-button-destructive-color-border: #FBB917;
+    --sds-c-button-destructive-color-border-hover: #FBB917;
+    --sds-c-button-destructive-text-color: #138808;
+    --sds-c-button-destructive-text-color-hover: #138808;
+    --sds-c-button-text-destructive-color-background: #138808;
+    --sds-c-button-text-destructive-color-background-hover: #138808;
+    --sds-c-button-text-destructive-border-color: #138808;
+    --sds-c-button-text-destructive-text-color: #FBB917;
+    --sds-c-button-text-destructive-text-color-hover: #FBB917;
+}
+.saffron {
+    --sds-c-card-color-background: #FBB917;
+}

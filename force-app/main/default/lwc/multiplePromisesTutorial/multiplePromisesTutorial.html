@@ -1,0 +1,23 @@
+<template>
+    <div class="slds-grid slds-wrap slds-gutters">
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-m-bottom_medium">
+            <lightning-input 
+                label="No. of Accounts you want to create"
+                onchange={handleCountChange}
+                name="account">
+            </lightning-input>
+            <lightning-input 
+                label="No. of Contacts under the account you want to create"
+                onchange={handleCountChange}
+                name="contact">
+            </lightning-input>
+            <lightning-button 
+                class="slds-p-right_medium slds-p-left_medium"
+                label="Create Acc/Cont/Oppo" 
+                variant="brand"
+                onclick={handleSubmit}
+            >
+            </lightning-button>
+        </div>
+    </div>
+</template>
